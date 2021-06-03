@@ -1,0 +1,516 @@
+
+        .fa{
+                cursor: pointer;
+        }
+        
+        .power-icon{
+                cursor: pointer;
+        }
+        
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 0;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        /* Optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        
+        .profile_img{
+                height: 100px;
+                width: 100px;
+                border:5px white solid;
+                box-shadow: 3px 5px 8px rgb(203, 203, 228);
+                border-radius: 50%;
+                position: relative;
+                top:-70px;
+        }
+        
+        .up_card{
+                width: 60%;
+                margin-top:50px;
+                height: 150px;
+                border-radius: 0px 20px 20px 0px;
+                box-shadow: 0px 0px 8px rgb(203, 203, 228);
+        }
+        
+        .up_image{
+                float: left;
+                height: 100%;
+                width: 30%;
+                margin: 0px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-right: 20px;
+        }
+        
+        .up_details{
+                float: left;
+                height: 100%;
+                width: auto;
+                text-align: left;
+        }
+        
+        .fa-pen{
+                float: right;
+                font-size: 20px;
+                color:gray;
+                cursor:pointer;
+                margin: 25px;
+                margin-right: 0px;
+                transition-duration: 0.5s;
+        }
+        
+        .fa-pen:hover{
+              color:black;
+              transform: rotate(360deg);
+              transition-duration: 0.3s;
+        }
+        
+        .fa-trash-alt{
+                float: right;
+                font-size: 20px;
+                color:gray;
+                cursor:pointer;
+                margin: 25px;
+                
+                transition-duration: 0.5s;
+        }
+        
+        .fa-trash-alt:hover{
+              color:black;
+              font-size:22;
+              transition-duration: 0.3s;
+        }
+        
+        .up_name{
+                font-size: 18px;
+                color: gray;
+                margin: 10px;
+                margin-top: 30px;
+                margin-left: 0px;
+        }
+        
+        .up_price{
+                font-size: 16px;
+                color: black;
+                margin: 10px;
+                margin-left: 0px;
+        }
+        
+        .up_category{
+                font-size: 14px;
+                color: black;
+                margin: 10px;
+                margin-left: 0px;
+        }
+        
+        
+        
+        
+        
+        
+        .profile_bar{
+                height: 200px;
+                width: 80%;
+                border: 20px;
+                box-shadow: 0px 0px 8px rgb(203, 203, 228);
+                background-color: white;
+                border-radius: 20px 20px 0px 0px;
+                position: relative;
+                top:30px;
+                padding: 20px;
+                margin-bottom: 100px;
+                border-bottom:  5px solid gray;
+        }
+        
+        .profile_name{
+                font-size: 36px;
+                color: gray;
+                text-align: center;
+                margin:30px;
+                position: relative;
+                top:-60px;
+        }
+        
+        .profile_city{
+                font-size: 20px;
+                color: black;
+                text-align: center;
+                position: relative;
+                top:-80px;
+        }
+        
+        .profile_age{
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                margin: 10px;
+                position: relative;
+                top:-80px;
+        }
+        
+        .trash_icon{
+                float: right;
+                margin: 30px;
+                font-size: 20px;
+                color:gray;
+                transition-duration: 0.5s;
+                cursor: pointer;
+        }
+        
+        .trash_icon:hover{
+                float: right;
+                margin: 30px;
+                font-size: 22px;
+                color:rgb(243, 114, 114);
+                transition-duration: 0.3s;
+        }
+        
+        .cart_card{
+                width: 80%;
+                box-shadow: 3px 5px 8px rgb(203, 203, 228);
+          border-radius: 15px;
+          margin: 25px;
+          height: 120px;
+          
+        }
+        
+        .back{
+                color:gray !important;
+                transition-duration: 0.5s !important ;
+        }
+        
+        .back:hover{
+                color:black !important;
+                transition-duration: 0.3s !important;
+                transform: rotate(360deg);
+        }
+        
+        .cart_details{
+                padding: 30px;
+                width:auto;
+                height: 100%;
+                padding: 20px;
+        
+        }
+        
+        .cart_name{
+                text-align: left;
+                font-size: 24px;
+                margin: 10px;
+                color: gray;
+        }
+        
+        .cart_price{
+                text-align: left;
+                margin-left: 10px;
+                font-size: 20px;
+        }
+        
+        
+        .card{
+          margin:30px;
+          height:350px;
+          width:200px;
+          box-shadow: 0px 0px 13px rgb(203, 203, 228);
+          border-radius: 15px;
+          display: inline-block;
+          background-color: white;
+        }
+        
+        .search{
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 20px;
+                width: 30vw;
+                position: fixed;
+                text-align: left;
+                top:33px;
+                left:75px;
+                z-index: 200;
+        }
+        
+        .card-img{
+          margin: 0px;
+          width: 100%;
+          height: 265px;
+          background-image: url('./snatch_card.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          cursor:pointer;
+          
+        }
+        
+        .card-title{
+          text-align: center;
+          font-size: 14px;
+          margin: 10px;
+          margin-top:20px;
+          color: gray;
+        }
+        
+        .card-price{
+          text-align: center;
+          font-size: 12px;
+          margin: 10px;
+          color:black
+        }
+        
+        
+                                *{font-family: 'Sen';}
+                                .side-bar{
+                                        display: flex;
+                                        flex-direction: column;
+                                        background-color: rgb(240,240,240);
+                                        border-radius: 0px 15px 15px 0px;
+                                        width: 75px;
+                                        padding: 20px;
+                                        height: 65vh;
+                                        position: fixed;
+                                        left: 0px;
+                                        top:15vh;
+                                        
+                                }
+                                .side-bar-icon{
+                                        display: block;
+                                        height: 15%;
+                                        margin-top: 25%;
+                                        text-align: center;
+                                        cursor:pointer;
+                                }
+                                .fa{
+                                        font-size: 24px;
+                                        color:gray;
+                                        margin: 10px;
+                                }
+        
+                                .bubble{
+                                        height: 10px;
+                                        width: 10px;
+                                        border-radius: 50%;
+                                        background-color: rgb(240,240,240);
+                                        border: 30px solid rgb(240,240,240);
+                                        padding: 0px;
+                                        cursor: pointer;
+                                        transition-duration: 0.5s;
+                                }
+                                .filter{
+                                        position: fixed;
+                                        right: 30px;
+                                        bottom: 130px;
+                                }
+                                .profile{
+                                        position: fixed;
+                                        right: 30px;
+                                        bottom: 30px;
+                                }
+                                #prof{
+                                        position: relative;
+                                        margin: 0px;
+                                        top:-7px;
+                                        left:-5px;
+                                }
+                                #filt{
+                                        position: relative;
+                                        margin: 0px;
+                                        top:-5px;
+                                        left:-7px;
+                                }
+        
+                                .logo-div{
+                                        height: 200px;
+                                        width: 200px;
+                                        background-color: gray;
+                                        color: white;
+                                        position: fixed;
+                                        right:30px;
+                                        top:0px;
+                                        box-shadow: 3px 5px 8px rgb(203, 203, 228);
+                                }
+                                .logo-text{
+                                        font-family: 'Abiland';
+                                        font-size: 48px;
+                                        margin-top: 30px;
+                                        width: 100%;
+        
+                                        color: white;
+                                        text-align: center;
+                                }
+        
+                                #sell{
+                                        color: white;
+                                        margin:20px;
+                                        margin-top: 45px;
+                                }
+        
+                                #cart{
+                                        color:white;
+                                        margin:20px;
+                                        margin-top: 45px;
+                                }
+        
+                                #power{
+                                        color:white;
+                                        margin:20px;
+                                        font-size: 24px;
+                                        margin-top: 45px;
+                                }
+        
+        
+                          
+        
+                                .holder{
+                                        display: flex;
+                                        width: 100%;
+                                        align-items: center;
+                                        flex-direction: row;
+                                        color: white !important;
+                                }
+        
+                                .big_block{
+                                        height: 300px;
+                                        width: 100%;
+                                        background-color: transparent;
+                                }
+        
+                                .load_more{
+                                        margin-top:100px;
+                                        margin-left: 250px;
+                                        margin-right: 250px;
+                                        background-color: black;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 10px;
+                                        border-radius: 20px;
+                                        cursor: pointer;
+                                }
+                                
+                                .section{
+                                        position: fixed;
+                                        overflow-y: auto;
+                                        width: 64vw;
+                                        height: 100vh;
+                                        left:15vw;
+                                        padding: 3%;
+                                        padding-bottom: 400px;
+                                }
+        
+        
+                                .body{
+                                        overflow: hidden;
+                                        
+                                }
+        
+         
+        
+                .left-view{
+                        width:45%;
+                        height:90%;
+                        margin:30px;
+                        float: left;
+                        background-color: transparent;
+                }
+        
+                .right-view{
+                        width: 40%;
+                        height: 90%;
+                        margin:30px;
+                        background-color: transparent;
+                        float: right;
+                }
+        
+                .product-image-view{
+                        width: 80%;
+                        height: 67%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        margin-bottom:20px;
+                }
+        
+                .button{
+                        background-color: black;
+                                        color: white;
+                                        font-size: 16px;
+                                        padding: 10px;
+                                        border-radius: 20px;
+                                        cursor: pointer;
+                                        margin-left:20px;
+                                        margin-right: 20px;
+                                        margin-top: 20px;
+                                        margin-bottom: 0px;
+                }
+        
+                .product-title-view{
+                        margin-top:20px;
+                        font-size: 22px;
+                        color: gray;
+                }
+                .product-discount-view{
+                        margin-top: 5px;
+                        font-size: 18px;
+                        color: green;
+                }
+                .product-description-view{
+                        margin-top: 25px;
+                        font-size: 16px;
+                        color: rgb(0, 0, 0);
+                        height: auto;
+                        width: 90%;
+                        text-align: justify;
+                }
+        
+                .filter-bar{
+                        height: 80px;
+                        width: 80%;
+                        position: fixed;
+                        bottom: 0px;
+                        left:10%;
+                        background-color: rgb(240,240,240);
+                        box-shadow: 3px 5px 8px rgb(203, 203, 228);
+                        border-radius: 15px 15px 0px 0px;
+                        z-index: 100;
+                        display: flex;
+                }
+        
+                input:focus, textarea:focus, select:focus{
+                outline: none;
+            }
+                input{
+                        width: 80%;
+                        font-size:16px;
+                        padding: 10px;
+                        background-color: rgb(240,240,240);
+                        color: gray;
+                        text-align: center;
+                        border: 0.1px soild rgb(240,240,240);
+                        border-radius: 20px;
+                        margin-top:10px;
+                        border-top-style: hidden;
+          border-right-style: hidden;
+          border-left-style: hidden;
+          border-bottom-style: hidden;
+          margin-bottom: 20px;
+                }
+        
+                .prompt{
+                        height: auto;
+                        width: 100%;
+                        padding: 10px;
+                        color: white;
+                        font-size: 14px;
+                        position: fixed;
+                        top:0px;
+                        right:-20px;
+                        text-align: center;
+                        opacity: 0;
+                        transition-duration: 1s;
+                        z-index:10000;
+                }
+        

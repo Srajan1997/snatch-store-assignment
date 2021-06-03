@@ -1,0 +1,171 @@
+<html>
+        <title>Snatch - Home</title>
+        <head>
+		    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+           
+        </head>
+
+
+        <body>
+                
+                <form class="example" onsubmit="return false">
+                        <div style="width: 10vw;"><input type="text" placeholder="Search Snatch" style="width: 17vw !important;text-align: left !important;padding-left:30px;" class="search" id="search_bar" ><i class="fa fa-search" style="position:fixed;font-size: 16px;color:gray;margin-top: 48px;margin-left: 18vw;z-index:400;cursor: pointer;" onclick="searchTerm()"></i></div>
+                      </form>
+                <div class="filter-bar" id="fb" style="display: none;">
+
+                        <div class="button" id="ss" onclick="switchSort()" style="text-align:center;margin: 20px;width: 25%;background-color: white;color:gray;display: inline;padding: 10px;height: auto;">Sorting Scheme</div>
+                        <input type="text" id="lp" placeholder="Lowest Price (INR)" style="margin: 20px;width: 25%;background-color: white;display: inline;padding: 10px;height: auto;">
+                        <input type="text" id="hp" placeholder="Highest Price (INR)" style="margin: 20px;width: 25%;background-color: white;display: inline;padding: 10px;height: auto;">
+                        <div class="button" id="af" style="margin: 20px;width: 10%;display: inline;padding: 10px;height: auto;text-align: center;" onclick="applyFilters()">APPLY</div>
+
+                       
+                </div>
+                <div class="prompt" id="prompt"></div>
+
+                <!--SIDEBAR for CATEGORY FILTER---SRAJAN CHANSORIYA 29-05-21-->
+<div class="side-bar">
+<div class="side-bar-icon"  onclick="switchCategory('fashion')">
+        <i class="fa fa-tshirt"></i>
+<div class="side-bar-icon-text">Fashion</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('gadget')">
+        <i class="fa fa-headphones"></i>
+<div class="side-bar-icon-text">Gadgets</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('home')">
+        <i class="fa fa-spa"></i>
+<div class="side-bar-icon-text">Decor</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('grocery')">
+        <i class="fa fa-pizza-slice"></i>
+        <div class="side-bar-icon-text">Grocery</div>        
+        </div>
+        <div class="side-bar-icon" onclick="switchCategory('books')">
+                <i class="fa fa-book-open"></i>
+        <div class="side-bar-icon-text">Books</div>        
+        </div>
+
+</div>
+
+<!--RIGHT BOTTOM BUBBLES for PROFILE AND FILTERING---SRAJAN CHANSORIYA 29-05-21-->
+
+<div class="profile bubble" onclick="showProfile()">
+        <i class="fa fa-user" id="prof"></i>
+        
+</div>
+<div class="filter bubble" id="filtb"  onclick="toggleFilter()">
+        <i class="fa fa-filter" id="filt"></i>
+       
+</div>
+
+
+<!--RIGHT TOP BOX for CART, LOGOUT AND ADD NEW PRODUCT---SRAJAN CHANSORIYA 29-05-21-->
+<div class="logo-div">
+        <div class="logo-text">
+<img src="snatch_logo.png" height="70px" width="auto">
+        </div>
+        <div class="holder" style="display: flex;">
+        <div class="sell-icon"onclick="showAdd()"><i class="fa fa-plus" id="sell"></i></div>
+        <div class="cart-icon"><i class="fa fa-shopping-cart" id="cart"  onclick="showCart()"></i></div>
+        <div class="power-icon" onclick="logout(1)"><i class="fas fa-power-off" id="power"></i></div>
+        </div>
+</div>
+</div>
+
+<!--MAIN CONTENT BODY---SRAJAN CHANSORIYA 29-05-21-->
+<center class="section">
+      <!--ALLPRODUCTS BODY---SRAJAN CHANSORIYA 29-05-21-->
+<div id="products-section"  style="width:100%; height: auto;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+</div>
+<!--SINGLE PRODUCT VIEW BODY---SRAJAN CHANSORIYA 29-05-21-->
+<div id="view-section"  style="width:100%; height: auto;display: none;margin-top: 5%;">
+</div>
+<!--PROFILE AND CREATED PRODUCTS BODY---SRAJAN CHANSORIYA 29-05-21-->
+<div id="profile-section"  style="width:100%; height: auto;display: none;">
+      
+</div>
+
+<!--NEW MEMBER REGISTER BODY---SRAJAN CHANSORIYA 29-05-21-->
+<div id="register-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <img src="snatch_black.png" height="100px" width="auto">
+                <br><br>
+                <div class="profile_name" style="position: relative;top:0px;">Single Account. Multiple Benifits!</div>
+                <input id="name_register" type="text" placeholder="Your Full Name">
+                <input id="email_register" type="email" placeholder="Your E-Mail ID">
+                <input id="city_register" type="text" placeholder="Your present City">
+                <input id="pass_register" type="text" placeholder="Choose a Password">
+                <input id="repass_register" type="password" placeholder="Confirm your Password">
+                <div class="button" style="width: 50%;" onclick="registerUser()">Create Account</div>
+                               <div class="button" style="background-color:white;color:gray;width: 50%;font-size:16px" onclick="showLogin()">Already on Snatch? Login Here.</div>
+ 
+        </div>
+</div>
+<!--NEW PRODUCT UPLOAD BODY---SRAJAN CHANSORIYA 30-05-21-->
+<div id="add-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <div class="profile_name" style="position: relative;top:0px;">Sell with Snatch. Grow Faster!</div>
+                <input type="button" style="height: 100px;width: 100px;border-radius: 50%;display: block;background-image: url('./upload2.png');background-size: contain;background-position: center;cursor:pointer" onclick="clickUpload()" >
+               
+                <input id="up_name" type="text" maxlength=20 placeholder="Product Name">
+                <div class="button" id="classChooser" style="background-color: rgb(240,240,240);color:gray;margin-top:10px;margin-bottom: 20px;width:78%" onclick="switchClass()">Select Category</div>
+                <input id="up_price" type="number" placeholder="Price to Buy | INR">
+                <input id="up_mrp" type="number" placeholder="Marked Price | INR">
+                
+                <textarea id="up_des" type="text" placeholder="Product Description" style="font-size:16px;width: 80%;height: 40px;margin-bottom:10px;padding:10px;border-radius: 20px;background-color: rgb(240,240,240);text-align: center;border: 0px solid white;"></textarea>
+                
+                <form  style="display: none;" id="iu-form" enctype="multipart/form-data">
+                        <input type="file" accept="image/*"  id="iu-input" name="photo" onchange="uploadPhoto()">
+                        <input type="submit" value="upload" id="iu-button">
+                </form>
+                <div class="button" style="width: 50%;" onclick="uploadProduct()">Add Product to Snatch</div>
+                
+        </div>
+</div>
+<!--PRODUCT EDITOR BODY---SRAJAN CHANSORIYA 30-05-21-->
+<div id="edit-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <div class="profile_name" style="position: relative;top:0px;">Snatch Product Editor</div>
+                <input type="button" style="height: 100px;width: 100px;border-radius: 50%;display: block;background-image: url('./upload2.png');background-size: contain;background-position: center;cursor:pointer" onclick="clickUpload()" >
+                <input id="up2_name" type="text" maxlength=20 placeholder="Product Name">
+                <input id="up2_price" type="number" placeholder="Price to Buy | INR">
+                <input id="up2_mrp" type="number" placeholder="Marked Price | INR">
+                <textarea id="up2_des" type="text" placeholder="Product Description" style="font-size:16px;width: 80%;height: 40px;margin-bottom:10px;padding:10px;border-radius: 20px;background-color: rgb(240,240,240);text-align: center;border: 0px solid white;"></textarea>
+                
+                <form  style="display: none;" id="iu-form" method="post" enctype="multipart/form-data">
+                        <input type="file" accept="image/*" name="photo" id="iu-input" onchange="uploadPhoto()" multiple>
+                        <input type="submit" value="upload" id="iu-button">
+                </form>
+                <div class="button" id="pc" style="width: 50%;" >Update Product on Snatch</div>
+                
+        </div>
+</div>
+<!--LOGIN BODY---SRAJAN CHANSORIYA 31-05-21-->
+<div id="login-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <img src="snatch_black.png" height="100px" width="auto">
+                <br><br>
+                <div class="profile_name" style="position: relative;top:0px;">Happiness? Just a step away!</div>
+                <input id="email_login" type="email" placeholder="Your Registered ID">
+                <input id="pass_login" type="text" placeholder="Your Account Password">
+                <div class="button" style="width: 50%;" onclick="loginUser()">Login</div>
+                <div class="button" style="background-color:white;color:gray;width: 50%;font-size:16px" onclick="showRegister()">Don't have an Account? Register Here.</div>
+        </div>
+</div>
+<div id="cart-section"  style="width:100%; height: auto;display: none;">
+</div>
+
+</center>
+</body>
+
+</html>
