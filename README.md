@@ -12,6 +12,18 @@ npm update
 npm install
 ```
 
+## Technologies
+
+This project uses the following Technologies:
+ 
+ 1. NodeJS Express Server with Crypto, JWT, Multer
+ 2. MySQL Database hosted at freedb.tech
+ 3. Open Technologies (HTML5, CSS3, JS ES6)
+ 4. JSON Web Token based User Authentication
+ 5. Heroku Server Hosting
+ 6. Cloudinary Image Hosting
+ 7. Netlify Frontend Hosting 
+
 ## Structure
 
 This repo has 5 Basic Components:
